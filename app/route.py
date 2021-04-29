@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 
-from app.api.v1 import items
+from app.api.v1 import todos
 
 
 router = APIRouter()
 
-router.include_router(items.router, prefix="/items", tags=["items"])
+router.include_router(todos.router, prefix="/todos", tags=["todos"])
