@@ -10,6 +10,7 @@ services:
       - DB_USER=root
       - DB_PASSWORD=root
       - DB_HOST=db
+    command: /start-reload.sh
     ports:
       - 8000:80
     volumes:
