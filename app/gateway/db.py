@@ -8,7 +8,7 @@ db_host = os.getenv("DB_HOST", "db")
 db_name = os.getenv("DB_NAME", "db_name")
 db_user = os.getenv("DB_USER", "root")
 db_password = os.getenv("DB_PASSWORD", "root")
-db_url = f"mysql://{db_user}:{db_password}@{db_host}:3306/{db_name}"
+db_url = f"mysql://{db_user}:{db_password}@{db_host}:3306/{db_name}?charset=utf8"
 
 engine = create_engine(db_url, encoding="utf-8", echo=False)
 
