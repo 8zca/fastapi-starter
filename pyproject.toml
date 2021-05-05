@@ -6,8 +6,11 @@ authors = ["8zca <excref@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-SQLAlchemy = "^1.4.11"
 mysqlclient = "^2.0.3"
+SQLAlchemy = "^1.4.11"
+click = "^7.1.2"
+fastapi = "^0.63.0"
+dependency-injector = "^4.32.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.3"
