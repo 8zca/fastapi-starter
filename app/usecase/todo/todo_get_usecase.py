@@ -1,12 +1,11 @@
 from typing import Union, List, Optional
-from usecase.base import BaseHandler
+from app.usecase.base import BaseHandler
 from app.domain.model.todo.todo_repository import TodoRepository
 from pydantic import BaseModel, Field
 
 
 class TodoGetInput(BaseModel):
     id: Optional[int] = None
-
 
 
 class TodoGetOutput(BaseModel):
@@ -16,12 +15,14 @@ class TodoGetOutput(BaseModel):
 
 
 class TodoGetUsecase(BaseHandler):
-    def call(self, input: TodoGetInput) -> Optional[Union[TodoGetOutput, List[TodoGetOutput]]]:
+    def call(
+        self, input: TodoGetInput
+    ) -> Optional[Union[TodoGetOutput, List[TodoGetOutput]]]:
         repository = TodoRepository()
 
         if input.id:
             # find by id
-            return TodoGetOutput(id=1, todo='test', status='doing')
+            return TodoGetOutput(id=1, todo="test", status="doing")
         else:
             # get all
             data = repository.all()

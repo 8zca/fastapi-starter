@@ -3,7 +3,10 @@ version: "3.4"
 services:
   api:
     # env_file: ./.env
-    build: .
+    build:
+      context: .
+      args:
+        - INSTALL_DEV=true
     container_name: my_fastapi_api
     environment:
       - DB_NAME=my_fastapi_development

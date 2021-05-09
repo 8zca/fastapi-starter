@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class BaseHandler():
+class BaseHandler(ABCMeta):
     @abstractmethod
     def call(self):
         """
