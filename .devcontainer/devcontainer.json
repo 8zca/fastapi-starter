@@ -1,6 +1,6 @@
 {
   "name": "fastapi_starter",
-  "extensions": ["ms-python.python"],
+  "extensions": ["ms-python.python", "ms-python.vscode-pylance"],
   "dockerComposeFile": ["../docker-compose.yml"],
   "settings": {
     "python.linting.pylintEnabled": false,
@@ -12,9 +12,8 @@
       "120",
       "--ignore=E203,W503,W504"
     ],
-    "python.formatting.blackArgs": ["--line-length", "120"],
+    "python.formatting.blackArgs": ["--line-length=120"],
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/usr/local/bin/black",
     "editor.formatOnSave": true,
     "python.pythonPath": "/usr/local/bin/python",
     "python.sortImports.args": ["-rc", "--atomic"]
